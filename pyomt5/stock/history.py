@@ -49,7 +49,7 @@ class StockPriceHistory():
                 return price_history
             except ConnectionTimeoutError:
                 nRetry += 1
-                log.error(
+                log.debug(
                     f"Connection Failed. Waiting for reconnection.. Retry #{nRetry}"
                 )
                 time.sleep(0.5)
@@ -86,6 +86,10 @@ class StockPriceHistory():
                        2018-09-21    162  19.44  19.60  19.26  19.45   58278000
         """
         data = self.get_price_history(symbol, timeframe, periods)
+
+        if data is None:
+            return pd.DataFrame()
+
         df = self._convert_to_dataframe(data)
 
         df['symbol'] = symbol
