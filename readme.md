@@ -4,10 +4,12 @@ pyOMT5 - Python Open MetaTrader 5
 Python module to request data from MetaTrader 5
 
 To get started:
+- install visual c++ 2010 redistributable (x86 or x64 according with your os) 
+- install visual c++ 2015 redistributable (x86 or x64 according with your os) 
 - create a new directory called pyOMT5 inside your MT5 Scrips folder. Ex: C:\Users\MyUser\AppData\Roaming\MetaQuotes\Terminal\83D4764E0403A8685E84D6FCAB361AAB\MQL5\Scripts\pyOMT5
-- copy the files pyOMT5Server.mq5 and pyOMT5Server.ex5 from util directory to this new directory and compile it using MetaEditor if necessary.
-- download DLL files according your OS (32|64 Bits) from https://github.com/dingmaotu/mql-zmq/
--   run pyOMT5Server as a expert. Remember to have enabled auto trading option and allow DLLs imports when asked.
+- download DLL files according your OS (32|64 Bits) from [ZMQ](https://github.com/dingmaotu/mql-zmq/tree/master/Library/VC2010) to the new direcotry called pyOMT5
+- copy the files pyOMT5Server.mq5 and pyOMT5Server.ex5 from util directory called pyOMT5 to this new directory and compile it using MetaEditor if necessary.
+- run pyOMT5Server as a expert. Remember to have enabled auto trading option and allow DLLs imports when asked.
 
 This module provides data in pandas representation because we believe that whether in finance, scientific fields, or data science, a familiarity with Pandas is known by everyone.
 
