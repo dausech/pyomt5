@@ -5,7 +5,7 @@ from codecs import open
 
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-    with open('README.md', 'r', 'utf-8') as f:
+    with open('ReadmePyPi.rst', 'r') as f:
         readme = f.read()
 except IOError:
     readme = 'pyOMT5 - Python Open Metatrader 5 module'
@@ -18,13 +18,13 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='pyOMT5',
-    version='0.0.23',
+    version='0.0.25',
     author='Paulo Rodrigues',
     author_email='paulorodriguesxv@gmail.com',
     license='MIT',
     description='pyOMT5 - Python Open Metatrader 5 module',
-    long_description='pyOMT5 - Python Open Metatrader 5 module',
-    long_description_content_type='text/markdown',
+    long_description=readme,
+    long_description_content_type='text/x-rst',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
