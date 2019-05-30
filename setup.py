@@ -18,7 +18,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='pyOMT5',
-    version='0.0.25',
+    version='0.0.26',
     author='Paulo Rodrigues',
     author_email='paulorodriguesxv@gmail.com',
     license='MIT',
