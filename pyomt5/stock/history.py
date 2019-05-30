@@ -85,6 +85,6 @@ class StockPriceHistory():
                 log.debug(
                     f"Connection Failed. Waiting for reconnection.. Retry #{nRetry}"
                 )
-                time.sleep(request_timeout)
+                time.sleep(self.request_timeout)
 
         return self._prepare_data(symbol, price_history)
