@@ -47,17 +47,19 @@ class StockPriceHistory():
 
     def get_price_from(self, symbol: str, from_date: datetime,
                        to_date: datetime, timeframe: MT5TimeFrame) -> list:
-        """ Get prices from history data
+        """ Get prices from history data and return it 
+            in a pandas DataFrame format
             Args:
                 symbol (str): symbol of stock
                 timeframe (MT5TimeFrame): interval between each price-time
-                start (datetime): start datetime
-                end (datetime): end datetime
+                periods: amount of data that'll be returned
             Returns:
                 list: a list with all data in the OHLC format 
                 Ex:
-                    [{'date': '2018.09.20 00:00', 'open': ' 19.5600', 'low': '19.0700', 'high': '19.6400', 'close':
-                     '19.1800', 'volume': '56002300'}]
+                                    close   high    low   open     volume
+                symbol date
+                PETR4  2018-09-20    19.18  19.64  19.07  19.56   56002300
+                       2018-09-21    19.44  19.60  19.26  19.45   58278000
         """
         end_date = to_date
         start_date = from_date
