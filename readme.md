@@ -19,19 +19,19 @@ This library uses ZeroMQ and create a internal tcp server on MetaTrader, with th
 Install
 ---------
 To install the package use:
-``` {.sourceCode .bash}
+```bash
 pip install pyOMT5
 ```
 
 If you want to install from source, then use:
-``` {.sourceCode .bash}
+```bash
 git clone https://github.com/paulorodriguesxv/pyOMT5.git
 pip install -e pyOMT5
 ```
 
 Usage
 -------
-``` {.sourceCode .python}
+```python
 
 from datetime import datetime
 from pyomt5.api import MT5TimeFrame
